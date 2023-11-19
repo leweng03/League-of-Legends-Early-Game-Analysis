@@ -10,7 +10,7 @@ by Lewis Weng
 
 This analysis is based on the League of Legends Competitive Matches dataset, which can be found on the website "Oracle's Elixir". In this dataset, there are 149400 rows and 123 columns. The data includes the champions picked and banned, the teams that played, their regions, objectives taken, game time, and differences in gold and experience at the 15 minute mark. Every row of the column equates to one player. Every 10 columns there are 2 columns that contains information about the 2 teams. Every match is 12 rows.
 
-This project will be focusing on these columns: league, firstdragon, firstherald, firsttower, golddiffat15, and result. New columns that are based on the existing columns will be created for the purposes of this project. The 'league' refers to the league in which the game was played in. 'firstdragon' refers to whether a team has claimed first dragon (0 for No, 1 for Yes). 'firstherald' refers to whether a team has taken the first herald (0 for No, 1 for Yes). 'firsttower' refers to whether a team has taken the first tower (0 for No, 1 for Yes). 'golddiffat15' refers to the gold difference betweeen the player and opposing player, or the team and the opposing team. 'result' contains data on whether a team or player won the game (0 for Loss, 1 for Win). 
+This project will be focusing on these columns: league, firstdragon, firstherald, firsttower, golddiffat15, and result. New columns that are based on the existing columns will be created for the purposes of this project. The 'league' refers to the league in which the game was played in. 'firstdragon' refers to whether a team has claimed first dragon (0 for No, 1 for Yes). 'firstherald' refers to whether a team has taken the first herald (0 for No, 1 for Yes). 'firsttower' refers to whether a team has taken the first tower (0 for No, 1 for Yes). 'golddiffat15' refers to the gold difference betweeen a player and their opposing counterpart, or a team and their opponent. The 'result' column contains data on whether a team or player won the game (0 for Loss, 1 for Win). 
 
 The goal of this project is to determine whether having a gold lead in the early game leads to winning games. This dataset contains game information from professional League of Legends esports games from 2022. Other League of Legends players may be interested in this information because it can help them identify what can help them win more games. People that bet on League of Legends esports games can also use this information to evaluate the strength of teams or determine to likelihood of their bets succeeding while the game is in progress. 
 
@@ -68,7 +68,7 @@ These are some aggregate statistics that show the relation between goldlead@15 a
 <iframe src="assets/LCK_tower_fig.html" width=600 height=450 frameBorder=0></iframe>
 
 
-From the table, the distribution looks different. In the permutation test, we get a p-value of 0, which means that we can reject the null hypothesis that they come from the distribution. The towermissing is NMAR in relation to league.
+From the table, the distribution looks different. In the permutation test, we get a p-value of 0, which means that we can reject the null hypothesis that they come from the distribution. The towermissing column is NMAR in relation to the league column.
 
 <iframe src="assets/side_vs_towermissing.html" width=600 height=450 frameBorder=0></iframe>
 
@@ -80,6 +80,6 @@ In the dataset, 50% of the towermissing was on red side and the other 50% of the
 
 <iframe src="assets/hypothesis_fig.html" width=600 height=450 frameBorder=0></iframe>
 
-This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis.
+This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis that gold leads at 15 minutes do not affect winning chances.
 
 ---
