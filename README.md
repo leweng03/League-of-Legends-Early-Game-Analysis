@@ -65,13 +65,13 @@ These are some aggregate statistics that show the relation between goldlead@15 a
 | LEC      | 0.281739 | 0.255403 |
 | LPL      | 0.242935 | 0.257773 |
 
-<iframe src="assets/LCK_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/LCK_tower_fig.html" width=400 height=300 frameBorder=0></iframe>
 
 
-I believe that the 'firsttower' column is NMAR. 
+I believe that the 'firsttower' column is NMAR. The distribution of towermissing
 
 
-<iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/side_vs_towermissing.html" width=400 height=300 frameBorder=0></iframe>
 
 In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we fail to reject the null hypothesis.
 
@@ -79,7 +79,7 @@ In the dataset, 50% of the towermissing was on red side and the other 50% of the
 
 ## Hypothesis Testing
 
-<iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/hypothesis_fig.html" width=400 height=300 frameBorder=0></iframe>
 
 This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis.
 
