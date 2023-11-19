@@ -28,7 +28,7 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 | LCK      | True          | False         | False        |           1045 | True     | True          |
 | LCK      | True          | True          | False        |           1309 | True     | True          |
 
-<iframe src="/assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
