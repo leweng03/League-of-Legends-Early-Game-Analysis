@@ -1,6 +1,6 @@
-# League-of-Legends-Early-Game-Analysis
+# League of Legends Early Game Analysis
 
-by Lewis Weng (leweng@ucsd.edu)
+by Lewis Weng
 
 ***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
 
