@@ -30,7 +30,7 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 <iframe src="assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
 
-<iframe src="assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+<!-- <iframe src="assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe> -->
 
 
 |   result |   firstherald |   firstdragon |   firsttower |
@@ -57,12 +57,12 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 | 0.231143 | 0.280035 |
 
 
-<iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
+<!-- <iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe> -->
 
 ---
 
 ## Hypothesis Testing
 
-<<iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
+<!-- <iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe> -->
 
 ---
