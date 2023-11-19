@@ -30,7 +30,12 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 <iframe src="assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
 
+From this visualization we can see that the chances of winning are highly elevated when the team has a gold lead at 15 minutes. Teams that have a gold lead at 15 minutes have won 72% of the time while teams that didn't have a gold lead at 15 minutes won 28% of the time.
+
+
 <iframe src="assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+
+This visualization shows the overlapping distribution for the gold difference at 15 minutse when first tower was taken vs first tower was not taken. The orange distribution is when first tower was not taken. The blue distribution is when first tower was taken. The red in the center is the overlapping part of the distributions. This means that teams that have taken first tower tend to have a bigger gold lead, with some overlap.
 
 
 |   result |   firstherald |   firstdragon |   firsttower |
@@ -59,10 +64,14 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 <iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
 
+In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization and can clearly see that 0.5 is part of the empirical distribution.
+
 ---
 
 ## Hypothesis Testing
 
 <iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
+
+This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis.
 
 ---
