@@ -30,12 +30,12 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 This is an example of what the dataset looked like after doing data cleaning and keeping relevant columns.
 
-<iframe src="assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/goldfig15.html" width=600 height=450 frameBorder=0></iframe>
 
 From this visualization we can see that the chances of winning are highly elevated when the team has a gold lead at 15 minutes. Teams that have a gold lead at 15 minutes have won 72% of the time while teams that didn't have a gold lead at 15 minutes won 28% of the time.
 
 
-<iframe src="assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/gold15_tower_fig.html" width=600 height=450 frameBorder=0></iframe>
 
 This visualization shows the overlapping distribution for the gold difference at 15 minutes when first tower was taken vs first tower was not taken with the orange distribution being when first tower was not taken, the blue distribution being when first tower was taken, and the red in the center being the overlapping part of the distributions. This graph suggests that teams that have taken first tower tend to have a bigger gold lead, with some overlap.
 
@@ -65,13 +65,13 @@ These are some aggregate statistics that show the relation between goldlead@15 a
 | LEC      | 0.281739 | 0.255403 |
 | LPL      | 0.242935 | 0.257773 |
 
-<iframe src="assets/LCK_tower_fig.html" width=400 height=300 frameBorder=0></iframe>
+<iframe src="assets/LCK_tower_fig.html" width=600 height=450 frameBorder=0></iframe>
 
 
 I believe that the 'firsttower' column is NMAR. The distribution of towermissing
 
 
-<iframe src="assets/side_vs_towermissing.html" width=400 height=300 frameBorder=0></iframe>
+<iframe src="assets/side_vs_towermissing.html" width=600 height=450 frameBorder=0></iframe>
 
 In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we fail to reject the null hypothesis.
 
@@ -79,7 +79,7 @@ In the dataset, 50% of the towermissing was on red side and the other 50% of the
 
 ## Hypothesis Testing
 
-<iframe src="assets/hypothesis_fig.html" width=400 height=300 frameBorder=0></iframe>
+<iframe src="assets/hypothesis_fig.html" width=600 height=450 frameBorder=0></iframe>
 
 This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis.
 
