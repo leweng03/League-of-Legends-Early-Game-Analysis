@@ -45,7 +45,7 @@ This visualization shows the overlapping distribution for the gold difference at
 | False         | 0.271654 |      0.359252 |      0.462598 |     0.195866 |
 | True          | 0.728346 |      0.640748 |      0.537402 |     0.804134 |
 
-These are some aggregate statistics that show the relation between goldlead@15 and other columns.
+These are some aggregate statistics that show the relation between goldlead@15 and other columns. Interesting, taking first dragon does not necessarily mean that will be ahead in gold at 15 minutes. Other factor are more indicative, such as firsttower and firstherald. This suggests that taking first dragon may not be as useful as taking first herald or first tower.
 
 ---
 
@@ -65,10 +65,15 @@ These are some aggregate statistics that show the relation between goldlead@15 a
 | LEC      | 0.281739 | 0.255403 |
 | LPL      | 0.242935 | 0.257773 |
 
+<iframe src="assets/LCK_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+
+
+I believe that the 'firsttower' column is NMAR. 
+
 
 <iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
 
-In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we2 fail to reject the null hypothesis.
+In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we fail to reject the null hypothesis.
 
 ---
 
