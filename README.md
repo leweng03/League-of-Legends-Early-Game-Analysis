@@ -30,27 +30,40 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 <iframe src="/assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
 
+<iframe src="/assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
+
+
+|   result |   firstherald |   firstdragon |   firsttower |
+|---------:|--------------:|--------------:|-------------:|
+| 0.271654 |      0.359252 |      0.462598 |     0.195866 |
+| 0.728346 |      0.640748 |      0.537402 |     0.804134 |
+
 ---
 
 ## Assessment of Missingness
 
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+|      False |     True |
+|-----------:|---------:|
+|   0.459646 | 0.238363 |
+|   0.301181 | 0.156186 |
+|   0.239173 | 0.12403  |
+| nan        | 0.481421 |
 
-```py
-print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
-```
+|      0.0 |      1.0 |
+|---------:|---------:|
+| 0.228014 | 0.250624 |
+| 0.297721 | 0.234082 |
+| 0.243122 | 0.235258 |
+| 0.231143 | 0.280035 |
 
-| Quarter     |   Count |
-|:------------|--------:|
-| Fall 2020   |       3 |
-| Winter 2021 |       2 |
-| Spring 2021 |       6 |
-| Summer 2021 |       4 |
-| Fall 2021   |      55 |
+
+<iframe src="/assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
 
 ## Hypothesis Testing
+
+<iframe src="/assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ---
