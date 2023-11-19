@@ -2,7 +2,7 @@
 
 by Lewis Weng
 
-***Note***: This is for a DSC80 project.
+***Note***: This is website is for a DSC80 project.
 
 ---
 
@@ -18,7 +18,7 @@ The goal of this project is to determine whether having a gold lead in the early
 
 ## Cleaning and EDA
 
-For my analysis, I convert the columns that consist of 0's and 1's to boolean values of True and False. I also removed the rows in the dataset that were empty. These rows were missing information that were needed for the analysis.
+For my analysis, I convert the columns that consist of 0's and 1's to boolean values of True and False. These columns are 'firstdragon', 'firstherald', 'firsttower', 'result'. I also removed the rows in the dataset that contained null values. These rows were missing information that were needed for the analysis. I added a column named 'goldlead@15'. If golddiffat15 was over 0, goldlead@15 is True. Otherwise, goldlead@15 is False. This column helps me with my analysis by identifing the presence of gold lead.
 
 | league   | firstdragon   | firstherald   | firsttower   |   golddiffat15 | result   | goldlead@15   |
 |:---------|:--------------|:--------------|:-------------|---------------:|:---------|:--------------|
@@ -28,6 +28,8 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 | LCK      | True          | False         | False        |           1045 | True     | True          |
 | LCK      | True          | True          | False        |           1309 | True     | True          |
 
+This is an example of what the dataset looked like after doing data cleaning and keeping relevant columns.
+
 <iframe src="assets/goldfig15.html" width=800 height=600 frameBorder=0></iframe>
 
 From this visualization we can see that the chances of winning are highly elevated when the team has a gold lead at 15 minutes. Teams that have a gold lead at 15 minutes have won 72% of the time while teams that didn't have a gold lead at 15 minutes won 28% of the time.
@@ -35,36 +37,38 @@ From this visualization we can see that the chances of winning are highly elevat
 
 <iframe src="assets/gold15_tower_fig.html" width=800 height=600 frameBorder=0></iframe>
 
-This visualization shows the overlapping distribution for the gold difference at 15 minutse when first tower was taken vs first tower was not taken. The orange distribution is when first tower was not taken. The blue distribution is when first tower was taken. The red in the center is the overlapping part of the distributions. This means that teams that have taken first tower tend to have a bigger gold lead, with some overlap.
+This visualization shows the overlapping distribution for the gold difference at 15 minutes when first tower was taken vs first tower was not taken with the orange distribution being when first tower was not taken, the blue distribution being when first tower was taken, and the red in the center being the overlapping part of the distributions. This graph suggests that teams that have taken first tower tend to have a bigger gold lead, with some overlap.
 
 
-|   result |   firstherald |   firstdragon |   firsttower |
-|---------:|--------------:|--------------:|-------------:|
-| 0.271654 |      0.359252 |      0.462598 |     0.195866 |
-| 0.728346 |      0.640748 |      0.537402 |     0.804134 |
+| goldlead@15   |   result |   firstherald |   firstdragon |   firsttower |
+|:--------------|---------:|--------------:|--------------:|-------------:|
+| False         | 0.271654 |      0.359252 |      0.462598 |     0.195866 |
+| True          | 0.728346 |      0.640748 |      0.537402 |     0.804134 |
+
+These are some aggregate statistics that show the relation between goldlead@15 and other columns.
 
 ---
 
 ## Assessment of Missingness
 
-|      False |     True |
-|-----------:|---------:|
-|   0.459646 | 0.238363 |
-|   0.301181 | 0.156186 |
-|   0.239173 | 0.12403  |
-| nan        | 0.481421 |
+| league   |      False |     True |
+|:---------|-----------:|---------:|
+| LCK      |   0.459646 | 0.238363 |
+| LCS      |   0.301181 | 0.156186 |
+| LEC      |   0.239173 | 0.12403  |
+| LPL      | nan        | 0.481421 |
 
-|      0.0 |      1.0 |
-|---------:|---------:|
-| 0.228014 | 0.250624 |
-| 0.297721 | 0.234082 |
-| 0.243122 | 0.235258 |
-| 0.231143 | 0.280035 |
+| league   |      0.0 |      1.0 |
+|:---------|---------:|---------:|
+| LCK      | 0.259107 | 0.245952 |
+| LCS      | 0.216218 | 0.240873 |
+| LEC      | 0.281739 | 0.255403 |
+| LPL      | 0.242935 | 0.257773 |
 
 
 <iframe src="assets/side_vs_towermissing.html" width=800 height=600 frameBorder=0></iframe>
 
-In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization and can clearly see that 0.5 is part of the empirical distribution.
+In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we2 fail to reject the null hypothesis.
 
 ---
 
