@@ -63,6 +63,6 @@ For my analysis, I convert the columns that consist of 0's and 1's to boolean va
 
 ## Hypothesis Testing
 
-<iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
+<<iframe src="assets/hypothesis_fig.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
