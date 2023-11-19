@@ -32,12 +32,12 @@ This is an example of what the dataset looked like after doing data cleaning and
 
 <iframe src="assets/goldfig15.html" width=600 height=450 frameBorder=0></iframe>
 
-From this visualization we can see that the chances of winning are highly elevated when the team has a gold lead at 15 minutes. Teams that have a gold lead at 15 minutes have won 72% of the time while teams that didn't have a gold lead at 15 minutes won 28% of the time.
+From this visualization we can see that the chances of winning are highly elevated when a team has a gold lead at 15 minutes. Teams that have a gold lead at 15 minutes have won 72% of the time, while teams that didn't have a gold lead at 15 minutes won 28% of the time.
 
 
 <iframe src="assets/gold15_tower_fig.html" width=600 height=450 frameBorder=0></iframe>
 
-This visualization shows the overlapping distribution for the gold difference at 15 minutes when first tower was taken vs first tower was not taken with the orange distribution being when first tower was not taken, the blue distribution being when first tower was taken, and the red in the center being the overlapping part of the distributions. This graph suggests that teams that have taken first tower tend to have a bigger gold lead, with some overlap.
+This visualization shows the overlapping distribution for the gold difference at 15 minutes when first tower was taken vs first tower was not taken with the orange distribution being when first tower was not taken, the blue distribution being when first tower was taken, and the red in the center being the overlapping part of the distributions. This graph suggests that teams that have taken first tower tend to have a bigger gold lead.
 
 
 | goldlead@15   |   result |   firstherald |   firstdragon |   firsttower |
@@ -45,7 +45,7 @@ This visualization shows the overlapping distribution for the gold difference at
 | False         | 0.271654 |      0.359252 |      0.462598 |     0.195866 |
 | True          | 0.728346 |      0.640748 |      0.537402 |     0.804134 |
 
-These are some aggregate statistics that show the relation between goldlead@15 and other columns. Interesting, taking first dragon does not necessarily mean that will be ahead in gold at 15 minutes. Other factor are more indicative, such as firsttower and firstherald. This suggests that taking first dragon may not be as useful as taking first herald or first tower.
+These are some aggregate statistics that show the relation between goldlead@15 and other columns. Interestingly, taking first dragon does not necessarily mean that will be ahead in gold at 15 minutes. Other factor are more indicative, such as firsttower and firstherald. This suggests that taking first dragon may not be as useful as taking first herald or first tower.
 
 ---
 
