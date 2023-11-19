@@ -51,29 +51,28 @@ These are some aggregate statistics that show the relation between goldlead@15 a
 
 ## Assessment of Missingness
 
-| league   |      False |     True |
-|:---------|-----------:|---------:|
-| LCK      |   0.459646 | 0.238363 |
-| LCS      |   0.301181 | 0.156186 |
-| LEC      |   0.239173 | 0.12403  |
-| LPL      | nan        | 0.481421 |
+| league   | towermissing=False | towermissing=True |
+|:---------|-------------------:|------------------:|
+| LCK      |   0.459646         | 0.238363          |
+| LCS      |   0.301181         | 0.156186          |
+| LEC      |   0.239173         | 0.12403           |
+| LPL      |   nan              | 0.481421          |
 
-| league   |      0.0 |      1.0 |
-|:---------|---------:|---------:|
-| LCK      | 0.259107 | 0.245952 |
-| LCS      | 0.216218 | 0.240873 |
-| LEC      | 0.281739 | 0.255403 |
-| LPL      | 0.242935 | 0.257773 |
+| league   | towermissing=False | towermissing=True |
+|:---------|-------------------:|------------------:|
+| LCK      | 0.259107           | 0.245952          |
+| LCS      | 0.216218           | 0.240873          |
+| LEC      | 0.281739           | 0.255403          |
+| LPL      | 0.242935           | 0.257773          |
 
 <iframe src="assets/LCK_tower_fig.html" width=600 height=450 frameBorder=0></iframe>
 
 
-I believe that the 'firsttower' column is NMAR. The distribution of towermissing
-
+From the table, the distribution looks different. In the permutation test, we get a p-value of 0, which means that we can reject the null hypothesis that they come from the distribution. The towermissing is NMAR in relation to league.
 
 <iframe src="assets/side_vs_towermissing.html" width=600 height=450 frameBorder=0></iframe>
 
-In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we fail to reject the null hypothesis.
+In the dataset, 50% of the towermissing was on red side and the other 50% of the tower missing was on blue side (there are two sides, 1 for each team). When I shuffle the 'towermissing' column and run permutation tests, I get this visualization, and the p-value is 0.524, which means we fail to reject the null hypothesis and the towermissing column MAR in relation to side. 
 
 ---
 
