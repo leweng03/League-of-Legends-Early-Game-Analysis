@@ -80,6 +80,14 @@ In the dataset, 50% of the towermissing was on red side and the other 50% of the
 
 <iframe src="assets/hypothesis_fig.html" width=600 height=450 frameBorder=0></iframe>
 
-This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. The p-value is 0, so we can reject the null hypothesis that gold leads at 15 minutes do not affect winning chances.
+This visualization is created by shuffling the 'result' column and getting the distribution of wins with a gold lead at 15 minutes. The red line is the observed statistic, which is not part of the empirical distribution. 
+
+The null hypothesis is: Having a Gold Lead at 15 minutes does not affect winning chances.
+The alternate hypothesis is: Having a Gold Lead at 15 minutes does not affect winning chances.
+
+
+The p-value is 0, so we can reject the null hypothesis that gold leads at 15 minutes do not affect winning chances.
+
+The conclusion is teams that are ahead in gold at the 15 minute mark tend to win those games. While there are other factors that affect game result, such as difference between team strength, the data suggests that getting ahead in the first 15 minutes seems to allow professional teams to reliably convert that lead into a win.
 
 ---
